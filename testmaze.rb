@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'Maze'
+require_relative 'maze'
 
 MAZE1 = %{#####################################
 # #   #     #A        #     #       #
@@ -46,11 +46,11 @@ MAZE3 = %{#####################################
 #####################################}
 class MazeTest < Minitest::Test
   def test_good_mazes
-    assert_equal true, Maze.new(MAZE1).solvable?
-    assert_equal true, Maze.new(MAZE2).solvable?
+    assert_equal true, MazeSolver.new(MAZE1).solvable?
+    assert_equal true, MazeSolver.new(MAZE2).solvable?
   end
 
   def test_bad_mazes
-    assert_equal false, Maze.new(MAZE3).solvable?
+    assert_equal false, MazeSolver.new(MAZE3).solvable?
   end
 end

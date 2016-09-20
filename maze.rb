@@ -79,11 +79,6 @@ class MazeSolver
 		end
 		checkDestination?
 	end
-	def to_s
-    @maze_matrix.map { |row| row.join('') }.join("\n")
-  	end
-  	
-
 
 end
 
